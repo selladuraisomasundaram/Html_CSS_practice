@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+    padding: 20px;
+}
+
+.webpage {
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+}
+
+.header img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid #667eea;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.header img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.header-content {
+    flex: 1;
+}
+
+.header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+/* ===== DETAILS SECTION ===== */
+.details {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background: white;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.detail-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 250px;
+    border: 2px solid #f0f0f0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+    border-color: #667eea;
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.detail-card h3 {
+    color: #667eea;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.detail-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ===== FEEDBACK SECTION ===== */
+.feedback {
+    padding: 30px;
+    background: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.testimonials {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feedback-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feedback-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.feedback-card:hover::before {
+    opacity: 1;
+}
+
+.stars {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: block;
+    letter-spacing: 2px;
+}
+
+.feedback-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.feedback-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header h2 {
+        font-size: 24px;
+    }
+
+    .detail-card {
+        min-width: 100%;
+    }
+
+    .feedback-card {
+        min-width: 100%;
+    }
+}
+

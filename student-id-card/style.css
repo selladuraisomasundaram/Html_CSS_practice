@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    user-select: none;
+    padding: 20px;
+}
+
+.student-card {
+    background: white;
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== CARD HEADER ===== */
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-header h3 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+/* ===== PHOTOS SECTION ===== */
+.photos {
+    padding: 25px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.photo-link {
+    display: inline-block;
+    position: relative;
+}
+
+.photos img {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 5px solid #667eea;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.photos img:hover {
+    transform: scale(1.08);
+    border-color: #764ba2;
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+/* ===== INFO SECTION ===== */
+.info {
+    padding: 20px;
+    text-align: center;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info h2 {
+    font-size: 26px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 16px;
+    color: #667eea;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* ===== CARD FOOTER ===== */
+.card-footer {
+    padding: 15px;
+    background: #f9f9f9;
+    border-top: 1px solid #efefef;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.action-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 480px) {
+    .student-card {
+        max-width: 100%;
+    }
+
+    .card-header h3 {
+        font-size: 20px;
+    }
+
+    .photos img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .info h2 {
+        font-size: 22px;
+    }
+}
