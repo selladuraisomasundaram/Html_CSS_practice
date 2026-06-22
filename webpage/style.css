@@ -31,6 +31,18 @@ body {
     gap: 20px;
 }
 
+.navbar ul{
+    padding:0;
+    margin:0;
+    gap:10px;
+    display:flex;
+    list-style:none;
+}
+
+.navbar a{
+    text-decoration:none;
+}
+
 .header img {
     height: 60px;
     width: 60px;
@@ -72,6 +84,11 @@ body {
     background: white;
     flex-wrap: wrap;
     justify-content: space-around;
+    border-radius: 0 0 12px 12px;
+    -webkit-border-radius: 0 0 12px 12px;
+    -moz-border-radius: 0 0 12px 12px;
+    -ms-border-radius: 0 0 12px 12px;
+    -o-border-radius: 0 0 12px 12px;
 }
 
 .detail-card {
@@ -206,23 +223,16 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header h2 {
-        font-size: 24px;
-    }
-
-    .detail-card {
-        min-width: 100%;
-    }
-
-    .feedback-card {
-        min-width: 100%;
-    }
+.contact-us{
+    background-color:white;
+    width:100%;
+    margin:25px 0 0 0;
+    padding: 15px;
+    display:flex;
+    justify-content:space-evenly;
+    border-radius:12px;
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    -ms-border-radius:12px;
+    -o-border-radius:12px;
 }
-
