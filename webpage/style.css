@@ -34,13 +34,18 @@ body {
 .navbar ul{
     padding:0;
     margin:0;
+    margin-bottom:20px;
     gap:10px;
     display:flex;
     list-style:none;
-}
+} 
 
 .navbar a{
     text-decoration:none;
+}
+
+.navbar a:hover{
+    color: #667eea;
 }
 
 .header img {
@@ -150,12 +155,10 @@ body {
 .feedback-title {
     text-align: center;
     font-size: 28px;
-    color: #333;
+    color: white;
+    margin-top:8px;
     margin-bottom: 30px;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .testimonials {
